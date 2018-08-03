@@ -5,9 +5,9 @@
   .module('app')
   .service('clienteService', clienteService);
 
-  clienteService.$inject = ['$resource'];
+  clienteService.$inject = ['$resource', 'API'];
 
-  function clienteService ($resource) {
-    return $resource('https://jsonplaceholder.typicode.com/users/:id', {id: '@id'});
+  function clienteService ($resource, API) {
+    return $resource(API +'users/:id/', {id: '@id'});
   }
 })();
