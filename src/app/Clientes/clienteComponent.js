@@ -9,7 +9,15 @@
 		controllerAs: 'vm'
 	});
 
-	function clienteController () {
-		this.mensaje = 'Mundooo';
+	clienteController.$inject = ['clienteService'];
+
+	function clienteController (clienteService) {
+		var vm = this
+		vm.mensaje = 'Mundooo';
+		vm.clientes = []
+		clienteService.query().$promise.then(function(data) {
+			vm.clientes = data
+		});
+		
 	}
 })();

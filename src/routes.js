@@ -16,4 +16,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     	url: '/cliente',
     	component: 'cliente'
     })
+    .state('verCliente', {
+      url: '/cliente/:id',
+      component: 'verCliente'
+    })
 }

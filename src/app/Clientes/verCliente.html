@@ -1,0 +1,24 @@
+<md-card>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ vm.cliente.name }}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <p>
+        <strong>Email: </strong>{{ vm.cliente.email }}
+      </p>
+      <p>
+        <strong>Telefono</strong> {{ vm.cliente.phone }}
+      </p>
+      <p>
+        <strong>Website</strong> {{ vm.cliente.website }}
+      </p>
+      <p>
+        <strong>Dirección</strong> {{ vm.cliente.address.street }} - {{vm.cliente.address.suite}}
+      </p>
+    </md-card-content>
+    <md-card-actions layout="column">
+      <md-button ui-sref="cliente" class="md-raised md-primary">Volver</md-button>
+    </md-card-actions>
+  </md-card>

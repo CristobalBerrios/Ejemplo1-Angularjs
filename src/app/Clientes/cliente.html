@@ -1,1 +1,18 @@
-<md-button class="md-raised md-primary">Primary</md-button>
+<md-card ng-repeat="cliente in vm.clientes">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{ cliente.name }}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>
+      <strong>Email: </strong>{{ cliente.email }}
+    </p>
+    <p>
+      <strong>Telefono</strong> {{ cliente.phone }}
+    </p>
+  </md-card-content>
+  <md-card-actions layout="column">
+    <md-button ui-sref="verCliente({id: cliente.id })" class="md-raised md-primary">Ver</md-button>
+  </md-card-actions>
+</md-card>
